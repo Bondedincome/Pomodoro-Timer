@@ -27,3 +27,10 @@ This is a simple **Pomodoro Timer** web application built with **React**. The Po
 ```bash
 git clone https://github.com/Bondedincome/Pomodoro-Timer
 ```
+
+### Process of running
+
+```bash
+npm install
+npm run dev
+```
