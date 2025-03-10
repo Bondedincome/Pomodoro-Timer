@@ -41,3 +41,7 @@ npm run dev
 - Adjust your short break time and long break time
   - highly recommend you use the 25/5/15 or 30/10/20 for more efficiency
 - Then just start
+
+### License
+
+MIT License approved
