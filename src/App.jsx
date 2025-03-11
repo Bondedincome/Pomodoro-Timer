@@ -49,7 +49,7 @@ const App = () => {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen">
+		<div className="flex flex-col items-center justify-center min-h-screen bg-[#E7D9C9]">
 			<h1 className="text-3xl font-bold font-sans">Pomodoro Timer</h1>
 			<TimerDisplay
 				minutes={Math.floor(timeLeft / 60)}

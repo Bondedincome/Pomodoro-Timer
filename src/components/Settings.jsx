@@ -12,18 +12,17 @@ const Settings = ({ workTime, shortBreak, longBreak, onChange }) => {
 					onChange={(e) => onChange("work", e.target.value)}
 				/>
 			</label>
-			<label className="bg-blue-950 rounded-lg text-white md:box-border">
+			<label >
 				Short Break (minutes):
 				<input
-					className="bg-blue-400 rounded-lg text-white"
 					type="number"
 					value={shortBreak}
 					onChange={(e) => onChange("shortBreak", e.target.value)}
 				/>
 			</label>
-			<label className="bg-blue-950 rounded-lg text-white md:box-border">
+			<label>
 				Long Break (minutes):
-				<input className="bg-blue-400 rounded-lg text-white"
+				<input
 					type="number"
 					value={longBreak}
 					onChange={(e) => onChange("longBreak", e.target.value)}
