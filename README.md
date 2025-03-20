@@ -42,7 +42,13 @@ npm run dev
   - highly recommend you use the 25/5/15 or 30/10/20 for more efficiency
 - Then just start
 
-### License
+## Future Improved Features
+
+- Create a better interface
+- Add a note taking feature
+- Add a calendar feature
+
+## License
 
 just for the sake of getting a commit.
 
