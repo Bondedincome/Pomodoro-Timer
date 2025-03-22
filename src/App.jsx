@@ -49,25 +49,29 @@ const App = () => {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen bg-[#E7D9C9]">
-			<h1 className="text-3xl font-bold font-sans">Pomodoro Timer</h1>
-			<TimerDisplay
-				minutes={Math.floor(timeLeft / 60)}
-				seconds={timeLeft % 60}
-				sessionType={sessionType}
-			/>
-			<Controls
-				onStart={handleStart}
-				onPause={handlePause}
-				onReset={handleReset}
-				isRunning={isRunning}
-			/>
-			<Settings
-				workTime={workTime}
-				shortBreak={shortBreak}
-				longBreak={longBreak}
-				onChange={handleSettingsChange}
-			/>
+		<div className="min-h-screen bg-[#E7D9C9]">
+			<div className="bg-amber-50 w-150 h-200 relative top-5 left-5 p-5 rounded-2xl">
+				<h1 className="text-3xl font-bold font-sans">Pomodoro Timer</h1>
+				<Settings
+					workTime={workTime}
+					shortBreak={shortBreak}
+					longBreak={longBreak}
+					onChange={handleSettingsChange}
+				/>
+			</div>
+			<div className="flex flex-col items-center justify-center absolute bg-amber-50 w-150 h-200 rounded-2xl top-5 right-5">
+				<TimerDisplay
+					minutes={Math.floor(timeLeft / 60)}
+					seconds={timeLeft % 60}
+					sessionType={sessionType}
+				/>
+				<Controls
+					onStart={handleStart}
+					onPause={handlePause}
+					onReset={handleReset}
+					isRunning={isRunning}
+				/>
+			</div>
 		</div>
 	);
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Settings = ({ workTime, shortBreak, longBreak, onChange }) => {
 	return (
-		<div className="flex flex-col gap-2 mt-4">
+		<div className="flex flex-col gap-2 mt-4 w-140 h-178 bg-amber-300 p-10 rounded-4xl">
 			<label className="bg-blue-950 rounded-lg text-white md:box-border">
 				Work Time (minutes):
 				<input
