@@ -47,6 +47,7 @@ npm run dev
 - Create a better interface
 - Add a note taking feature
 - Add a calendar feature
+- Add a wallpaper feature
 
 ## License
 
