@@ -48,6 +48,7 @@ npm run dev
 - Add a note taking feature
 - Add a calendar feature
 - Add a wallpaper feature
+- Add a sound track for focused study and bineurals
 
 ## License
 
