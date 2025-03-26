@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import TimerDisplay from "./components/TimerDisplay";
 import Controls from "./components/Controls";
 import Settings from "./components/Settings";
+import NavBar from "./components/NavBar";
+
 
 const App = () => {
 	const [timeLeft, setTimeLeft] = useState(25 * 60);
@@ -32,7 +34,7 @@ const App = () => {
 			}
 		}
 		return () => clearInterval(timer);
-	}, [isRunning, timeLeft]);
+	}, [isRunning, longBreak, sessionCount, sessionType, shortBreak, timeLeft, workTime]);
 
 	const handleStart = () => setIsRunning(true);
 	const handlePause = () => setIsRunning(false);
@@ -50,7 +52,7 @@ const App = () => {
 
 	return (
 		<div className="min-h-screen bg-[#E7D9C9]">
-			<div className="bg-amber-50 w-150 h-200 relative top-5 left-5 p-5 rounded-2xl">
+			<div className="bg-amber-50 w-150 h-160 relative top-40 left-5 p-5 rounded-2xl">
 				<h1 className="text-3xl font-bold font-sans">Pomodoro Timer</h1>
 				<Settings
 					workTime={workTime}
@@ -59,7 +61,7 @@ const App = () => {
 					onChange={handleSettingsChange}
 				/>
 			</div>
-			<div className="flex flex-col items-center justify-center absolute bg-amber-50 w-150 h-200 rounded-2xl top-5 right-5">
+			<div className="flex flex-col items-center justify-center absolute bg-amber-50 w-150 h-160 rounded-2xl top-40 right-5">
 				<TimerDisplay
 					minutes={Math.floor(timeLeft / 60)}
 					seconds={timeLeft % 60}
