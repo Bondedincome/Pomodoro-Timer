@@ -4,7 +4,6 @@ import Controls from "./components/Controls";
 import Settings from "./components/Settings";
 import NavBar from "./components/NavBar";
 
-
 const App = () => {
 	const [timeLeft, setTimeLeft] = useState(25 * 60);
 	const [isRunning, setIsRunning] = useState(false);
@@ -34,7 +33,15 @@ const App = () => {
 			}
 		}
 		return () => clearInterval(timer);
-	}, [isRunning, longBreak, sessionCount, sessionType, shortBreak, timeLeft, workTime]);
+	}, [
+		isRunning,
+		longBreak,
+		sessionCount,
+		sessionType,
+		shortBreak,
+		timeLeft,
+		workTime,
+	]);
 
 	const handleStart = () => setIsRunning(true);
 	const handlePause = () => setIsRunning(false);
@@ -52,6 +59,7 @@ const App = () => {
 
 	return (
 		<div className="min-h-screen bg-[#E7D9C9]">
+			<NavBar />
 			<div className="bg-amber-50 w-150 h-160 relative top-40 left-5 p-5 rounded-2xl">
 				<h1 className="text-3xl font-bold font-sans">Pomodoro Timer</h1>
 				<Settings
